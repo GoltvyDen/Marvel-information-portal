@@ -41,8 +41,12 @@ class CharList extends Component {
             item.thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg' ? imgStyle =  {'object-fit' : 'unset'} : imgStyle = {'object-fit' : 'cover'};
     
             return (
-                <li className="char__item" key={item.id}>
-                    <img src={item.thumbnail} alt={'Photo of ' + item.name} style={imgStyle}/>
+                <li 
+                    className="char__item" 
+                    key={item.id}
+                    onClick={() => this.props.onCharSelected(item.id)}>
+
+                    <img src={item.thumbnail} alt={'Image of ' + item.name} style={imgStyle}/>
                     <div className="char__name">{item.name}</div>
                 </li>
             )
