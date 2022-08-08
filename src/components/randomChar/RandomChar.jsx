@@ -51,7 +51,7 @@ class RandomChar extends Component {
             .getCharacter(id)
             .then(this.onCharLoaded)
             .catch(this.onError);
-    }
+        }
         
     render() {
         const {char, loading, error} = this.state;
