@@ -1,6 +1,7 @@
 import { Component } from 'react';
-import MarvelService from '../../services/MarvelService';
+import PropTypes from 'prop-types';
 
+import MarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
@@ -8,6 +9,7 @@ import Skeleton from '../skeleton/Skeleton';
 import './charInfo.scss';
 
 class CharInfo extends Component {
+    bfgzsdfsd
     state = {
         char: null,
         loading: false,
@@ -79,7 +81,7 @@ const View = ({char}) => {
     const {name, description, thumbnail, homepage, wiki, comics} = char;
 
     let imgStyle
-    thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg' ? imgStyle =  {'object-fit' : 'contain'} : imgStyle = {'object-fit' : 'cover'};
+    thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg' ? imgStyle =  {'objectFit' : 'contain'} : imgStyle = {'objectFit' : 'cover'};
     return (
         <>
             <div className="char__basics">
@@ -116,6 +118,10 @@ const View = ({char}) => {
             </ul>
         </>
     )
+}
+
+CharInfo.propTypes = {
+    charId: PropTypes.number
 }
 
 export default CharInfo;
