@@ -1,4 +1,4 @@
 import MainPage from "./MainPage";
-import ComicsPage from "../comicsList/ComicsList";
+import ComicsPage from "./ComicsPage";
 
 export {MainPage, ComicsPage};
