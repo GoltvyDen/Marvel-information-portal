@@ -16,13 +16,13 @@ const App = () => {
             <div className="app">
                 <AppHeader/>
                 <main>
-                    <Suspense>
-                        <Routes fallback={<Spinner/>}>
-                            <Route path='/' element={<MainPage/>}/>
-                            <Route path='/comics' element={<ComicsPage/>}/>
-                            <Route path='/comics/:comicId' element={<SingleComicPage/>}/>
-                            <Route path='*' element={<Page404/>}></Route>
-                        </Routes>
+                    <Suspense fallback={<Spinner/>}>
+                            <Routes>
+                                <Route path='/' element={<MainPage/>}/>
+                                <Route path='/comics' element={<ComicsPage/>}/>
+                                <Route path='/comics/:comicId' element={<SingleComicPage/>}/>
+                                <Route path='*' element={<Page404/>}></Route>
+                            </Routes>
                     </Suspense>
                 </main>
             </div>
